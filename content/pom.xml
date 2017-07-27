@@ -134,6 +134,8 @@
                     <excludes>
                         <exclude>**/extensions/**/*.js</exclude>
                         <exclude>**/vendor/**/*.js</exclude>
+                        <!-- Exclude SPA JS; This will likely be moved outside of AEM -->
+                        <exclude>**/components/spa/**/dist/**</exclude>
                     </excludes>
                 </configuration>
             </plugin>

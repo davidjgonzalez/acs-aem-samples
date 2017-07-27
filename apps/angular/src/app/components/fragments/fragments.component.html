@@ -1,0 +1,18 @@
+<input
+  class="filter__field"
+  type="text"
+  placeholder="Filter results"
+  #filterField
+  (keyup)="setFilter(filterField.value)"
+  />
+
+<p class="filter__feedback" *ngIf="filter.length > 3">
+  Filtering by: {{ filter }}
+</p>
+
+<ul class="fragment-list__list">
+  <li class="fragment-list__item"
+      *ngFor="let fragment of fragments | keywordFilter:filter"
+      [innerHTML]="fragment.getHtml()">
+  </li>
+</ul>
