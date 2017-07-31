@@ -16,7 +16,7 @@ export class ContentService {
   }
 
   getExperienceFragmentHTML(path: string) {
-    const url = this.config.addOrigin(path + '.html');
+    const url = this.config.addOrigin(path + '.body.html');
     return this.http.get(url, { responseType: 'text' });
   }
 

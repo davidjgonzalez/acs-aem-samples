@@ -11,10 +11,13 @@ export class ExperienceFragmentFactoryService {
     return new Promise(resolve => {
       this.content.getExperienceFragmentHTML(fragmentPath).subscribe(fragmentHTML => {
 
-        const html = document.createElement('HTML');
-        html.innerHTML = fragmentHTML;
+        /**
+         * const html = document.createElement('HTML');
+         * html.innerHTML = fragmentHTML;
+         * html.getElementsByTagName('body')[0].innerHTML || ''
+         */
 
-        resolve(new ExperienceFragment(fragmentPath, html.getElementsByTagName('body')[0].innerHTML || ''));
+        resolve(new ExperienceFragment(fragmentPath, fragmentHTML));
       });
     });
   }
