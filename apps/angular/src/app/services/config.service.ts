@@ -7,13 +7,13 @@ export class ConfigService {
 
   // 'http://localhost:4503
   private origin: string = '';
-  // '/content/acs-samples/spa/angular/_jcr_content/root/responsivegrid/angular.json'
-  private componentUrl = '';
+  // '/spa/angular.json'
+  private apiUrl = '';
   private externalize = false;
 
   constructor() {
     this.origin = environment['origin'] || '';
-    this.componentUrl = environment['componentUrl'] || '';
+    this.apiUrl = environment['apiUrl'] || '';
     this.externalize = !isUndefined(this.origin) && this.origin !== '';
   }
 
@@ -30,8 +30,7 @@ export class ConfigService {
     return this.getOrigin() + absolutePath;
   }
 
-  // environment.componentUrl
-  getComponentUrl() {
-    return this.addOrigin(this.componentUrl);
+  getApiUrl() {
+    return this.apiUrl;
   }
 }

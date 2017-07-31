@@ -1,0 +1,9 @@
+<h3 class="card-list__title stripe">Experience Fragments</h3>
+
+<dl class="card-list"
+    *ngIf="fragments">
+  <dd class="card-list__card"
+      *ngFor="let fragment of fragments"
+      [innerHTML]="fragment.html | externalize : 'html'">
+  </dd>
+</dl>

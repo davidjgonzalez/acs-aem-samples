@@ -1,1 +1,16 @@
-<app-fragments></app-fragments>
+<div id="app__angular" class="app__background"
+     [ngStyle]="{ 'background-image': 'url(' + (backgroundImage | externalize) + ')'}">
+
+  <div class="content-wrapper">
+    <app-hero
+      [heroFragment]="heroFragment"></app-hero>
+
+    <h2 class="sub-title">{{ fragmentsTitle }}</h2>
+
+    <app-experience-fragments
+      [fragmentPaths]="experienceFragmentPaths"></app-experience-fragments>
+
+    <app-content-fragments
+      [fragmentPaths]="contentFragmentPaths"></app-content-fragments>
+  </div>
+</div>

@@ -5,17 +5,26 @@ import {HttpClientModule} from '@angular/common/http';
 
 import {ContentService} from './services/content.service';
 import {ConfigService} from './services/config.service';
-import {KeywordFilterPipe} from './pipes/keyword-filter.pipe';
-import {AppComponent} from './app.component';
-import {FragmentsComponent} from './components/fragments/fragments.component';
-import { HeroComponent } from './components/hero/hero.component';
+import {HeroFactoryService} from './factories/heroFactory.service'
+import {ExperienceFragmentFactoryService} from './factories/experienceFragmentFactory.service';
+import {ContentFragmentFactoryService} from './factories/contentFragmentFactory.service';
+
+import {ExperienceFragmentsComponent} from './components/experience-fragments/experience-fragments.component';
+import {ContentFragmentsComponent} from './components/content-fragments/content-fragments.component';
+
+import {HeroComponent} from './components/hero/hero.component';
+import {AppComponent} from './components/app/app.component';
+import {ExternalizerPipe} from './pipes/externalizer.pipe';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FragmentsComponent,
-    KeywordFilterPipe,
-    HeroComponent
+    ExperienceFragmentsComponent,
+    ContentFragmentsComponent,
+    HeroComponent,
+    ExternalizerPipe,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,7 +33,12 @@ import { HeroComponent } from './components/hero/hero.component';
   ],
   providers: [
     { provide: 'content', useClass: ContentService },
-    { provide: 'config', useClass: ConfigService }
+    { provide: 'config', useClass: ConfigService },
+    { provide: 'heroFactory', useClass: HeroFactoryService },
+    { provide: 'experienceFragmentFactory', useClass: ExperienceFragmentFactoryService },
+    { provide: 'contentFragmentFactory', useClass: ContentFragmentFactoryService },
+
+    ConfigService // For Pipe
   ],
   bootstrap: [AppComponent]
 })

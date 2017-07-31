@@ -35,7 +35,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n", ""]);
+exports.push([module.i, "/* You can add global styles to this file, and also import other style files */\n\n/* New */\n\n#app__angular .content-wrapper {\n  font-family: \"Helvetica Neue\";\n  font-weight: 100;\n  max-width: 1800px;\n  margin: 0 auto;\n  padding: 300px 0 100px 0;\n}\n\n#app__angular .stripe {\n  font-family: \"Helvetica Neue\";\n  background-color: rgba(0, 0, 0, .25);\n}\n\n#app__angular .hero {\n  color: white;\n  padding: 4rem 2rem 2rem 2rem;\n  margin-top: 4rem;\n  font-size: 1.25rem;\n}\n\n\n#app__angular .hero h1 {\n  font-size: 8rem;\n  font-weight: 100;\n  margin: .25rem 0;\n}\n\n#app__angular .hero a {\n  background-color: red;\n  padding: 1rem;\n  color: white;\n  font-weight: 400;\n  text-decoration: none;\n  display: inline-block;\n  margin: 1rem 0 0 0;\n}\n\n#app__angular .hero a:active {\n  background-color: maroon;\n}\n\n#app__angular .sub-title {\n  font-size: 4rem;\n  font-weight: 200;\n  text-align: center;\n  margin-top: 4rem;\n}\n\n#app__angular .card-list__title {\n  font-size: 2rem;\n  font-weight: 200;\n  color: white;\n  padding: 2rem 0 2rem 3rem;\n\n}\n\n#app__angular .card-list__card {\n  background-color: #f7f7f7;\n  border: solid 2px #ccc;\n  color: black;\n  display: inline-block;\n  padding: 1rem;\n  width: 500px;\n  text-align: center;\n  margin-bottom: 1rem;\n}\n\n#app__angular .card-list__card img {\n  display: block;\n  width: 100%;\n  border: solid 1px #ccc;\n}\n", ""]);
 
 // exports
 
