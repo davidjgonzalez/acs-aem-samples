@@ -136,6 +136,7 @@
                         <exclude>**/vendor/**/*.js</exclude>
                         <!-- Exclude SPA JS; This will likely be moved outside of AEM -->
                         <exclude>**/components/spa/**/dist/**</exclude>
+                        <exclude>**/apps/acs-samples/clientlibs/spa/**/*.js</exclude>
                     </excludes>
                 </configuration>
             </plugin>
